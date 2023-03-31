@@ -1,6 +1,6 @@
-# fly.toml file generated for silent-feather-4901 on 2023-03-25T11:53:00+01:00
+# fly.toml file generated for late-hill-4531 on 2023-03-31T13:00:59+02:00
 
-app = "silent-feather-4901"
+app = "late-hill-4531"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
@@ -12,7 +12,7 @@ processes = []
 
 [[services]]
   http_checks = []
-  internal_port = 8080
+  internal_port = 80
   processes = ["app"]
   protocol = "tcp"
   script_checks = []
@@ -35,3 +35,7 @@ processes = []
     interval = "15s"
     restart_limit = 0
     timeout = "2s"
+
+[[statics]]
+  guest_path = "/usr/share/nginx/html/"
+  url_prefix = "/"
